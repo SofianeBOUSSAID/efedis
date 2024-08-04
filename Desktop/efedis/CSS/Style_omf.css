@@ -1,0 +1,365 @@
+*{font-family: "Roboto",Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+:root{
+    --primaire: red;
+    --secondaire: lime;
+    --tertiaire:rgb(255, 255, 47);
+}
+
+/**************************REGLES GENERALE*******************************/
+
+
+.spinner_back{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 210%;
+    position: absolute;
+    z-index: 3;
+    animation: disp 0s ease-in 3s;
+    animation-fill-mode: forwards;
+}
+
+.spinner{
+    background-color: var(--tertiaire) ;
+    border: 8px solid #f3f3f3;
+    width: 80px;
+    height: 80px;
+    border-top: solid 8px var(--primaire) ;
+    border-bottom: solid 8px var(--secondaire);
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 3;
+    animation: spin 3s linear;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.445);
+    margin: auto;
+    position: sticky;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes disp{
+    to{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+/**************************REGLES GENERALE*******************************/
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header h1{
+    font-family:"Shrikhand", Arial, Helvetica, sans-serif;
+    padding: 10px;
+
+}
+
+header .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pos{
+    background-color: rgba(225, 225, 225, 0.884);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 3px 5px 0px rgb(151 151 151 / 41%);}
+
+.pos p{
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+}
+
+.pos i{
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+/**************************FIN HEADER*******************************/
+
+.tete{
+    padding: 30px 20px 50px 20px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tete_text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+    font-weight: 100;
+    font-size: 1.10em;
+    text-align: center;
+}
+
+.tete_text :nth-child(1){
+    font-weight: 600;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+}
+
+.tete_boutton{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50px;
+    background: linear-gradient( 175deg, red , yellow) ;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.445);
+    transition: 0.25s;
+}
+
+.tete_boutton:hover{
+    filter: brightness(1.2);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/**************************FIN TETE*******************************/
+
+.fonction{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.fonc_title{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+
+.fen_etap{
+    display: flex;
+    align-items: center;
+    margin: 2em 0px;
+}
+
+.text_etap:hover{
+    background-color: #9760da2a;
+    transition: 0.25s;
+}
+
+.text_etap:hover :nth-child(1){
+    color: var(--primaire);
+}
+
+
+.num_etap{
+    background-color: var(--primaire);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.9em;
+    z-index: 2;
+}
+
+.text_etap{
+    display: flex;
+    padding: 25px 20px;
+    background-color:rgb(245, 245, 245) ;
+    border-radius: 15px;
+    width: 90%;
+    box-shadow: 0px 5px 15px 0px rgba(97, 97, 97, 0.445);
+    margin-left: -12px;
+    z-index: 1;
+    transition: 0.25s;
+}
+
+.text_etap p{
+    font-weight: 500;
+}
+
+.text_etap i{
+    color: grey;
+    font-size: 1.2em;
+    margin-right: 20px;
+    padding-left: 10px;
+    transition: 0.25s;
+}
+
+/**************************FIN FONCTIONNEMENT*******************************/
+
+.restau{
+    background-color: rgb(245, 245, 245) ;
+    padding: 30px 20px;
+}
+
+.restau .title{
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.etiquette{
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2.5px 15px 0px rgba(97, 97, 97, 0.445);
+}
+
+.image_etiq img{
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+}
+
+.image_etiq{
+    display: flex;
+    justify-content: end;
+}
+
+.text_coeur{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.text_etiq{
+    line-height: 1.5em;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.text_etiq :nth-of-type(1){
+    font-weight: 600;
+}
+
+.coeur_etiq{
+    font-size: 1.5em;
+    padding-right: 0.2em;
+}
+
+.coeur_etiq :nth-child(1){
+    position: absolute ;
+    transform: scale(0.95);
+}
+
+.coeur_etiq :nth-child(2){
+    background: linear-gradient(170deg,red 0%,yellow 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+
+.coeur_etiq:hover :nth-child(2){
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.coeur_etiq{
+    width: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.new{
+    background-color: var(--tertiaire);
+    color: red;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 1em;
+    border-radius: 2px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+
+
+
+/**************************DÉBUT FOOTER*******************************/
+
+footer{
+    padding: 20px;
+    padding-left: 30px;
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    color: white;
+    line-height: 1.6em;
+    font-size: 1.1em;
+    padding-bottom: 40px;
+}
+
+footer i{
+    font-size: 0.8em;
+    padding-right: 5px;
+}
+
+footer .title{
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 769px){
+
+    .fen_res{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .etiquette{
+        width: 45%;
+        margin-bottom: 40px;
+    }
+}
